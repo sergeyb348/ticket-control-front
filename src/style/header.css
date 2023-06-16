@@ -1,0 +1,23 @@
+.DivHeader{ 
+    background-color: #40E0D0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.AHeaderTitel{
+    padding:15px;
+    font-size: 30px;
+    font-family: fantasy;
+    padding-left: 50px;
+    color: white;
+}
+
+.AHeaderA{
+    font-size: 20px;
+    font-family: fantasy;
+    padding-right: 30px;
+    color: #E0FFFF;
+}
+

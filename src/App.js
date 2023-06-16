@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./components/AppRouter";
+import NavBar from "./components/NavBar";
+import {Context} from './index'
 
-function App() {
+
+const App = () => {
+  let checkAuth = localStorage.getItem('token') ? true : false
+  const [auth, setAuth]  = useState(checkAuth)
+  const manager = useContext(Context)
+  manager.auth = auth;
+  manager.setAuth = setAuth;
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+     <NavBar/>
+      <AppRouter/>
+    </BrowserRouter>
   );
 }
 
