@@ -43,6 +43,8 @@ const Categories = observer(() => {
                                                 <div onClick={()=>navigate(`/ticket/new/${c.id}`)} className="col-md-9 m-2" >
                                                     <div className="fs-5">Категория: {c.name}</div>
                                                     <div className="mt-1">Количество билетов: {c.number}</div>
+                                                    <div className="mt-1">Активированные билеты: {c.count_activ}</div>
+                                                    <div className="mt-1">Не активированные: {c.count_inactiv}</div>
                                                 </div>
                                     </li>
                             ))

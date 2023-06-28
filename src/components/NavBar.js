@@ -37,6 +37,7 @@ const NavBar = observer(() => {
           <span class="navbar-toggler-icon"></span>
         </button>
         
+        
         {manager.auth ? (
           <div className="collapse navbar-collapse" id="myNavigation">
             <div className="navbar-nav">

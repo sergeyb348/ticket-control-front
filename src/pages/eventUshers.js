@@ -41,7 +41,7 @@ const EventUshers = observer(() => {
                             listUshers.map((usher) => (
                                 <li class="" >
                                     <a  class="list-group-item list-group-item-action" >
-                                        <div className="col-md-9 m-2" onClick={() => navigate(`/usher/${usher.id}`)}>
+                                        <div className="col-md-9 m-2" onClick={() => navigate(`usher/${usher.id}`)}>
                                         <div className="fs-5" >ФИО: {usher.lastName} {usher.firstName} {usher.surname}</div>
                                         <div className="fs-6 mt-1" >Почта: {usher.email} {usher.id}</div>
                                     </div>

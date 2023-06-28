@@ -15,7 +15,7 @@ const NewEvents = observer(() =>{
 
     const addEvent = async () =>{
         try {
-
+            console.log(name.trim().length)
             if(!(0 <name.trim().length < 32) ){
                 Swal.fire({
                     icon: 'error',
@@ -28,7 +28,7 @@ const NewEvents = observer(() =>{
             if(!(0 < description.trim().length)){
                 Swal.fire({
                     icon: 'error',
-                    text: "Некорректно задано описание",
+                    text: "Некорректно задано названия",
                     confirmButtonColor: '#33b5e5'
                 })
                 return
